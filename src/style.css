@@ -1,0 +1,93 @@
+:root {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: #102542;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.9), transparent 40%),
+    linear-gradient(135deg, #c7f0db 0%, #f4f1de 45%, #f7c59f 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 520px);
+  padding: 40px 32px;
+  border-radius: 28px;
+  background: rgba(255, 252, 248, 0.82);
+  border: 1px solid rgba(16, 37, 66, 0.08);
+  box-shadow: 0 24px 60px rgba(16, 37, 66, 0.14);
+  text-align: center;
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2c6e49;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.description {
+  margin: 16px 0 28px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(16, 37, 66, 0.72);
+}
+
+.go-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 34px;
+  background: linear-gradient(135deg, #2c6e49, #3a86ff);
+  color: #fffdf8;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 14px 28px rgba(44, 110, 73, 0.25);
+}
+
+.go-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(44, 110, 73, 0.32);
+}
+
+.go-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 32px 24px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
