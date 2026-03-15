@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: './',
+    base: '/shuffle-sample/',
     server: {
         host: true,
         port: 5173,
