@@ -1,9 +1,7 @@
 :root {
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
-  color: #102542;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.9), transparent 40%),
-    linear-gradient(135deg, #c7f0db 0%, #f4f1de 45%, #f7c59f 100%);
+  color: #183153;
+  background: #fff9f0;
 }
 
 * {
@@ -14,6 +12,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: #fff9f0;
 }
 
 button {
@@ -23,54 +22,55 @@ button {
 .hero {
   min-height: 100vh;
   display: grid;
-  place-items: center;
-  padding: 24px 24px 88px;
+  align-items: center;
+  justify-items: center;
+  padding: 88px 24px 120px;
 }
 
 .card {
-  width: min(100%, 520px);
-  padding: 40px 32px;
-  border-radius: 28px;
-  background: rgba(255, 252, 248, 0.82);
-  border: 1px solid rgba(16, 37, 66, 0.08);
-  box-shadow: 0 24px 60px rgba(16, 37, 66, 0.14);
+  width: min(100%, 620px);
+  padding: 36px 12px;
   text-align: center;
-  backdrop-filter: blur(14px);
 }
 
 .eyebrow {
-  margin: 0 0 12px;
-  font-size: 0.85rem;
+  margin: 0 0 20px;
+  font-size: 0.98rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #2c6e49;
+  color: #de7c5a;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(1.65rem, 4vw, 2.5rem);
-  line-height: 1.1;
+  font-size: clamp(2.1rem, 6vw, 3.9rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
 }
 
 .description {
-  margin: 16px 0 24px;
+  width: min(100%, 420px);
+  margin: 24px auto 34px;
   font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(16, 37, 66, 0.72);
+  line-height: 1.7;
+  color: rgba(24, 49, 83, 0.72);
 }
 
 .sub-actions-label {
-  margin: 22px 0 12px;
-  font-size: 0.9rem;
+  margin: 48px 0 16px;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: rgba(16, 37, 66, 0.56);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(24, 49, 83, 0.5);
 }
 
 .button-group {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .category-button,
@@ -78,26 +78,36 @@ h1 {
   border: 0;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
 .category-button {
+  min-width: 108px;
+  border: 1px solid #d7c9fb;
   border-radius: 999px;
-  padding: 11px 14px;
-  background: rgba(16, 37, 66, 0.07);
-  color: #355070;
+  padding: 11px 16px;
+  background: #efe7ff;
+  color: #6f63a8;
   font-size: 0.92rem;
-  box-shadow: inset 0 0 0 1px rgba(53, 80, 112, 0.12);
+  box-shadow:
+    0 7px 0 #ddd1fb,
+    0 12px 20px rgba(111, 99, 168, 0.12);
 }
 
 .go-button {
-  width: 100%;
-  border-radius: 999px;
-  padding: 17px 34px;
-  background: linear-gradient(135deg, #2c6e49, #3a86ff);
+  width: min(100%, 260px);
+  border: 1px solid #ef7441;
+  border-radius: 22px;
+  padding: 22px 34px;
+  background: #ff8a5b;
   color: #fffdf8;
-  font-size: 1.08rem;
-  box-shadow: 0 14px 28px rgba(44, 110, 73, 0.25);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  box-shadow:
+    0 10px 0 #e36d3d,
+    0 18px 28px rgba(227, 109, 61, 0.16);
+  transform: translateY(0);
 }
 
 .category-button:hover,
@@ -106,17 +116,27 @@ h1 {
 }
 
 .category-button:hover {
-  background: rgba(16, 37, 66, 0.11);
-  box-shadow: inset 0 0 0 1px rgba(53, 80, 112, 0.18);
+  background: #e8ddff;
+  box-shadow:
+    0 9px 0 #ddd1fb,
+    0 16px 24px rgba(111, 99, 168, 0.16);
 }
 
 .go-button:hover {
-  box-shadow: 0 18px 32px rgba(44, 110, 73, 0.32);
+  box-shadow:
+    0 12px 0 #e36d3d,
+    0 22px 32px rgba(227, 109, 61, 0.18);
 }
 
 .category-button:active,
 .go-button:active {
-  transform: translateY(0);
+  transform: translateY(6px);
+}
+
+.go-button:active {
+  box-shadow:
+    0 6px 0 #e36d3d,
+    0 12px 18px rgba(227, 109, 61, 0.14);
 }
 
 .suggestion-trigger {
@@ -127,25 +147,32 @@ h1 {
   border: 0;
   border-radius: 999px;
   padding: 10px 14px;
-  background: rgba(16, 37, 66, 0.9);
-  color: #fffdf8;
+  background: #ffffff;
+  color: #4a6484;
   font-size: 0.86rem;
   font-weight: 700;
-  box-shadow: 0 14px 28px rgba(16, 37, 66, 0.22);
+  box-shadow: 0 10px 24px rgba(74, 100, 132, 0.12);
   cursor: pointer;
 }
 
 @media (max-width: 480px) {
-  .card {
-    padding: 32px 24px;
-  }
-
   .description {
     font-size: 0.95rem;
   }
 
   .button-group {
-    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .go-button {
+    width: 100%;
+    font-size: 1.22rem;
+    padding: 20px 28px;
+  }
+
+  .category-button {
+    min-width: 0;
+    width: 100%;
   }
 
   .suggestion-trigger {
